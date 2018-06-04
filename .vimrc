@@ -64,7 +64,7 @@ func SetTitle()
 		call append(line(".")+4, "\#  Created Time: ".strftime("%F %T")) 
 		call append(line(".")+5, "\#########################################################################") 
 		call append(line(".")+6, "")
-		call append(line(".")+7, "\#/usr/bin/python")
+		call append(line(".")+7, "\#!/usr/bin/python")
 		call append(line(".")+8, "")
 	"如果文件类型为.sh文件 
 	elseif &filetype == 'sh' 
