@@ -290,3 +290,8 @@ set t_Co=256
 colorscheme molokai
 " 设置状态栏主题风格
 let g:Powerline_colorscheme='solarized256'
+
+# 按 F4 进入和退出复制模式，解决复制文本自动换行的问题
+nnoremap <F4> :set invpaste paste?<CR>
+imap <F4> <C-O>:set invpaste paste?<CR>
+set pastetoggle=<F4>
