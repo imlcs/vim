@@ -295,3 +295,7 @@ let g:Powerline_colorscheme='solarized256'
 nnoremap <F4> :set invpaste paste?<CR>
 imap <F4> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<F4>
+imap   <C-S>   <ESC>:w<CR>
+map    <C-S>   :w<CR>
+imap   <C-Q>   <ESC>:q<CR>
+map    <C-Q>   :q<CR>
