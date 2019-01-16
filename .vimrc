@@ -279,8 +279,6 @@ let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeWinPos='left'
 let NERDTreeWinSize=31
-nnoremap f :NERDTreeToggle
-map <F7> :NERDTree<CR> 
 "配色方案
 set t_Co=256
 colorscheme molokai
