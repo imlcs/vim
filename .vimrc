@@ -7,6 +7,10 @@ func! SaveInputData()
 	exec 'normal "+gP'
 	exec "w! /tmp/input_data"
 endfunc
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'easymotion/vim-easymotion'
+
 "colorscheme torte
 "colorscheme murphy
 "colorscheme desert 
@@ -284,10 +288,62 @@ set t_Co=256
 colorscheme molokai
 " 设置状态栏主题风格
 let g:Powerline_colorscheme='solarized256'
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
 " 按 ctrl + w 进入和退出复制模式，解决复制文本自动换行的问题
 map <C-W> :set invpaste paste?<CR>
 imap <C-W>:set invpaste paste?<CR>
 imap   <C-S>   <ESC>:w<CR>
 map    <C-S>   :w<CR>
-imap   <C-Q>   <ESC>:q<CR>
-map    <C-Q>   :q<CR>
+augroup relative_numbser
+    autocmd!
+    autocmd InsertEnter * :set norelativenumber
+    autocmd InsertLeave * :set relativenumber
+augroup END
+
+" 开启保存 undo 历史功能
+set undofile
+" undo 历史保存路径
+set undodir=~/.vim/
+
+nmap lh   ^
+nmap le   $
+let mapleader=","
+
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap s <Plug>(easymotion-overwin-f)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
