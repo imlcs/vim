@@ -316,11 +316,11 @@ map <C-W> :set invpaste paste?<CR>
 imap <C-W>:set invpaste paste?<CR>
 imap   <C-S>   <ESC>:w<CR>
 map    <C-S>   :w<CR>
-augroup relative_numbser
-    autocmd!
-    autocmd InsertEnter * :set norelativenumber
-    autocmd InsertLeave * :set relativenumber
-augroup END
+"augroup relative_numbser
+"    autocmd!
+"    autocmd InsertEnter * :set norelativenumber
+"    autocmd InsertLeave * :set relativenumber
+"augroup END
 
 " 开启保存 undo 历史功能
 set undofile
