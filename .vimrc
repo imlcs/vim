@@ -274,9 +274,6 @@ set undofile
 " undo 历史保存路径
 set undodir=~/.vim/
 
-nmap lh   I
-nmap le   A
-nmap v    V
 let mapleader="," " 设置 leader 键为 ,
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
