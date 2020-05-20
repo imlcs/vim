@@ -297,5 +297,5 @@ map <leader>b <Plug>(easymotion-linebackward)
 
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
-# yaml 文件编辑配置
+" yaml 文件编辑配置
 autocmd FileType yaml setlocal ai ts=2 sw=2 et
